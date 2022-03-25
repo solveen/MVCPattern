@@ -32,12 +32,12 @@
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap p-0">
                     <h3 class="mb-4 text-center">Have an account?</h3>
-                    <form action="#" class="signin-form">
+                    <form action="login" method="Post">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Username" name="username" required>
                         </div>
                         <div class="form-group">
-                            <input id="password-field" type="password" class="form-control" placeholder="Password" name="username" required>
+                            <input id="password-field" type="password" class="form-control" placeholder="Password" name="password" required>
                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
@@ -57,7 +57,8 @@
                     </form>
                     <p class="w-100 text-center">&mdash; Or Don't have an account? &mdash;</p>
                     <div class="social d-flex text-center">
-                        <a href="register.jsp" class="px-2 py-2 mr-md-1 rounded"> Register Here </a>
+
+                        <a href="User?page=newUsers" class="px-2 py-2 mr-md-1 rounded"> Register Here </a>
                     </div>
                 </div>
             </div>
