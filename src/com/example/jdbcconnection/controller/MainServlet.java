@@ -38,7 +38,7 @@ public class MainServlet extends HttpServlet {
             requestDispatcher.forward(request, response);
         }
 
-        if (page.equalsIgnoreCase("index")) {
+        if (page.equalsIgnoreCase("login")) {
             User user = new User();
 
             String username = request.getParameter("username");
@@ -53,15 +53,19 @@ public class MainServlet extends HttpServlet {
                 response.addCookie(user_cookie);
 
 
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("../page/dashboard.jsp");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("pages/dashboard.jsp");
                 requestDispatcher.forward(request, response);
             } else {
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("../index.jsp");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
                 requestDispatcher.include(request, response);
             }
         }
         if (page.equalsIgnoreCase("newUsers")){
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("pages/register.jsp");
+            requestDispatcher.forward(request,response);
+        }
+        if (page.equalsIgnoreCase("oldUsers")){
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
             requestDispatcher.forward(request,response);
         }
     }

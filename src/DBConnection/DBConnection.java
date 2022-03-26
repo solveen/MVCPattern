@@ -8,13 +8,13 @@ import java.sql.SQLException;
 public class DBConnection {
     Connection connection = null;
 
-    public void DbConnect() {
+    public DBConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
 
             //name of the data base
             String DB_URL = "jdbc:mysql://localhost:3306/collegedb";
-
+            //user accounts ma name ra password j xa tei rakhne ho
             String name = "root";
             String password = "";
 
