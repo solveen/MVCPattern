@@ -32,7 +32,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap p-0">
                     <h3 class="mb-4 text-center">Have an account?</h3>
-                    <form action="login" method="Post">
+                    <form action="User?page=login" method="Post">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Username" name="username" required>
                         </div>
