@@ -58,7 +58,7 @@ public class UserService {
 
     public User getUser(String user_name, String password) {
         User user = null;
-        String login = "select * from the studentinfo where user_name=?, password=?";
+        String login = "select * from studentinfo where user_name=? and password=?";
         try {
             PreparedStatement preparedStatement = new DBConnection().getStatement(login);
             preparedStatement.setString(1, user_name);
@@ -84,7 +84,7 @@ public class UserService {
     public List<User> getUserList() throws SQLException {
 
         List<User> users = new ArrayList<>();
-        String query = "select * from studentinfo ";
+        String query = "select * from studentinfo";
         PreparedStatement preparedStatement = new DBConnection().getStatement(query);
 
         ResultSet re = preparedStatement.executeQuery();
